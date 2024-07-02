@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "name": "Element Click Tracker",
+  "version": "1.0",
+  "description": "Tracks clicks on elements and adds emojis based on click count.",
+  "icons": {
+    "48": "icon.png"
+  },
+  "side_panel":{
+    "default_path": "popup.html"
+  },
+  "action": {
+    "default_path": "popup.html",
+    "default_title": "Click to open panel"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "commands"
+  ],
+  "commands": {
+    "toggle-feature": {
+      "suggested_key": {
+        "default": "Alt+T",
+        "mac": "Alt+T"
+      },
+      "description": "Toggle the extension feature"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

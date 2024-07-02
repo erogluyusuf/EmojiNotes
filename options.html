@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="options-page-title"></title>
+
+    <style>
+        
+body {
+    background-color: #eee;
+    font-family: arial,sans-serif;
+    font-size: 13px
+}
+
+#content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 40px auto 20px;
+    padding: 32px;
+    width: 650px
+}
+
+
+        .gtx-footer{
+            background-color: #f0f0f0;
+            color: #636363;
+            font-family: "Roboto",sans-serif;
+            font-size: 11px;
+            margin-top: 9px;
+            padding: 10px;
+            text-align: center;
+        }
+        .gtx-content{
+            color: #252525;
+            font-family: "Roboto",arial,sans-serif;
+            font-size: 14px;
+            margin: 0;
+        }
+        .gtx-a{
+            color:#4285f4 ;
+            display: inline;
+            font-size: 11px;
+            text-decoration: none;
+        }
+
+
+        #aa{
+            justify-content: center; 
+            text-align: center;
+            font-size: xx-large;
+            
+        }
+       
+        .z {
+        position: relative;
+        background-color: #fcf59b;
+        border-radius: 0px 10px 250px / 0 200px 55px 250px;
+        box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.3);
+        padding: 20px;
+        min-width: 250px;
+        max-width: 300px;
+        min-height: 150px;
+        z-index: 9;
+        transform: translateY(-10%);
+        transition: opacity 0.3s ease-in-out;
+        top: 50px;
+        left: 150px;
+      }
+
+      #z {
+        width: 100%;
+        height: 300px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: black;
+        text-align: left;
+        vertical-align: top;
+        resize: none;
+        word-wrap: break-word;
+        word-break: break-all;
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 70%;
+        font-weight: bold;
+      }
+      .editor-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .editor-container label {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .editor-container select,
+      .editor-container input[type="number"],
+      .editor-container input[type="color"],
+      .editor-container input[type="text"] {
+        font-size: 14px;
+        padding: 5px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      #saveBttn{
+        cursor: pointer;  
+        width: 100px; height: 35px; 
+        background-color: #4CAF50;
+         color: white;
+         border-radius: 10px; 
+        border: none;
+      }
+      #saveBttn:active{
+        transform: scale(0.9);
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="content">
+       <div class="gtx-footer">  <a id="aa"  class="gtx-a" id="translate-link" target="_blank" href="#">EmojiNotes <br> <small style="font-style: italic;">(Comming Soon)</small></a>
+        <br><div class="z">
+            <textarea id="z">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan taklit yazı bloğudur. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metin olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.
+
+Nedeni basit: Lorem Ipsum birkaç harf, sözcük ve sayıdan oluşan bir karışımdır ve anlamını yitirmiş bir yazı olduğu için birçok harf ve kelime içeren Latince kitaplarına benziyor. Lorem Ipsum, yazı dünyasında standart bir yapım aşaması haline geldiğinden, birçok masaüstü yayıncılık ve web sayfa düzenleme editörü tarafından kullanılıyor. Ayrıca arama motorlarında kullanılan Lorem Ipsum, genellikle özgün olmayan veya düşük kaliteli içerik oluşturmak için kullanılır. Bu nedenle, Lorem Ipsum'un arama motoru optimizasyonu (SEO) ve web sitesi tasarımı için önemli bir unsuru olmuştur.
+
+            </textarea>
+        </div>
+        <br><br><br><br><br><br>
+        <div class="editor-container">
+            <label for="font-select">Yazı Tipi:</label>
+            <select id="font-select">
+              <!-- Sans-serif -->
+              <option value="Arial, sans-serif">Arial</option>
+              <option value="Helvetica, sans-serif">Helvetica</option>
+              <option value="Verdana, sans-serif">Verdana</option>
+              <option value="Tahoma, sans-serif">Tahoma</option>
+              <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+              <option value="Calibri, sans-serif">Calibri</option>
+              <option value="Open Sans, sans-serif">Open Sans</option>
+              <option value="Roboto, sans-serif">Roboto</option>
+              <option value="Montserrat, sans-serif">Montserrat</option>
+            
+              <!-- Serif -->
+              <option value="Times New Roman, Times, serif">Times New Roman</option>
+              <option value="Georgia, serif">Georgia</option>
+              <option value="Palatino Linotype, Book Antiqua, Palatino, serif">Palatino</option>
+              <option value="Garamond, serif">Garamond</option>
+              <option value="Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif">Baskerville</option>
+              <option value="Crimson Text, serif">Crimson Text</option>
+            
+              <!-- Monospace -->
+              <option value="Courier New, Courier, monospace">Courier New</option>
+              <option value="Lucida Console, Monaco, monospace">Lucida Console</option>
+              <option value="Inconsolata, monospace">Inconsolata</option>
+              <option value="Source Code Pro, monospace">Source Code Pro</option>
+            
+              <!-- Cursive -->
+              <option value="Comic Sans MS, cursive, sans-serif">Comic Sans MS</option>
+              <option value="Brush Script MT, cursive">Brush Script MT</option>
+              <option value="Pacifico, cursive">Pacifico</option>
+              <option value="Dancing Script, cursive">Dancing Script</option>
+              <option value="Great Vibes, cursive">Great Vibes</option>
+            
+              <!-- Handwriting -->
+              <option value="Shadows Into Light, cursive">Shadows Into Light</option>
+              <option value="Handlee, cursive">Handlee</option>
+              <option value="Homemade Apple, cursive">Homemade Apple</option> 
+            </select>
+            
+            <br>
+            <label for="font-size">Yazı Boyutu:</label>
+            <input type="number" id="font-size" min="6" max="36" value="16">
+            <br>
+            <label for="text-color">Yazı Rengi:</label>
+            <input type="color" id="text-color" value="#000000">
+            <br>
+            <label for="font-weight">Yazı Ağırlığı:</label>
+            <select id="font-weight">
+              <option value="normal">Normal</option>
+              <option value="bold">Bold</option>
+              <option value="bolder">Bolder</option>
+              <option value="lighter">Lighter</option>
+            </select>
+            <br>
+            <label for="font-style">Yazı Stili:</label>
+            <select id="font-style">
+              <option value="normal">Normal</option>
+              <option value="italic">Italic</option>
+              <option value="oblique">Oblique</option>
+            </select>
+            <br>
+            <label for="line-height">Metin Aralığı:</label>
+            <input type="number" id="line-height" min="1" max="3" step="0.1" value="1.5">
+            <br>
+            <label for="text-shadow">Metin Gölgesi:</label>
+            <input type="color" id="text-shadow-color" value="#000000"><br>
+            <input type="number" id="text-shadow-x" min="-10" max="10" step="0.1" value="0">
+            <input type="number" id="text-shadow-y" min="-10" max="10" step="0.1" value="0">
+            <input type="number" id="text-shadow-blur" min="0" max="10" step="0.1" value="0">
+            
+            <label for="text-decoration">Metin Dekorasyonu:</label>
+            <select id="text-decoration">
+              <option value="none">None</option>
+              <option value="underline">Underline</option>
+              <option value="overline">Overline</option>
+              <option value="line-through">Line Through</option>
+            </select>
+            <br>
+            <label for="text-transform">Metin Dönüşümü:</label>
+            <select id="text-transform">
+              <option value="none">None</option>
+              <option value="uppercase">UPPERCASE</option>
+              <option value="lowercase">lowercase</option>
+              <option value="capitalize">Capitalize</option>
+            </select>
+            <br>
+            <label for="text-padding">Metin Kenar Boşluğu:</label>
+            <input type="text" id="text-padding" value="0">
+            <br>
+            <label for="text-align">Hizalama:</label>
+            <select id="text-align">
+              <option value="left">Sola Hizala</option>
+              <option value="center">Ortala</option>
+              <option value="right">Sağa Hizala</option>
+              <option value="justify">Yasla</option>
+            </select>
+          </div>
+          <button id="saveBttn" >
+            Save
+          </button>
+    
+    </div>
+
+    </div> <!-- end of content div -->
+<footer class="gtx-footer">
+    <div id="autoOption"></div>
+    <img src="siyah.png" alt="use"  height="24"><br><br> &#169;
+    <span id="year">2024</span> <a style="text-decoration: none; color: #636363;" href="https://www.instagram.com/globipedi" target="_blank"> Globipedi  </a>- 
+      <a class="gtx-a" id="options-link" target="_blank" href="options.html">Extension Options</a> -
+      <a class="gtx-a" id="translate-link" target="_blank" href="">EmojiNotes</a>
+  </footer>
+
+
+
+
+  <script src="options.js" ></script>
+  </body>
+</html>
