@@ -448,6 +448,7 @@ document.addEventListener('dblclick', function(event) {
                         console.log('Seçilen emoji:', emoji);
                         existingEmoji.textContent = emoji;
                         saveEmojiForElement(xpath, emoji);
+                        emojiContainer.remove();
                     });
                     emojiContainer.appendChild(emojiItem);
 
