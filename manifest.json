@@ -1,10 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "Element Click Tracker",
+  "name": "EmojiNotes",
   "version": "1.0",
   "description": "Tracks clicks on elements and adds emojis based on click count.",
   "icons": {
-    "48": "icon.png"
+    "16": "16x16.png",
+    "48": "48x48.png",
+    "128": "128x128..png"
   },
   "side_panel":{
     "default_path": "popup.html"
