@@ -231,7 +231,7 @@ document.addEventListener('mousedown', function(event) {
         draggableElement.style.cursor = 'grabbing';
         
         // Öğenin konumunu absolute olarak ayarla
-
+        draggableElement.style.position = 'fixed';
     }
 });
 
@@ -243,7 +243,7 @@ document.addEventListener('mouseup', function() {
 
         // Sürükleme sırasında kaldırılan seçim işaretçisini geri yükle
         document.body.style.userSelect = '';
-
+        draggableElement.style.position = 'absolute';
         // Cursor stilini varsayılan yap
         draggableElement.style.cursor = 'grabbing';
 
